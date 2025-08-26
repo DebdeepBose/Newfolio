@@ -1,7 +1,7 @@
 export const NavItem = ({ icon: Icon, label, rightPos = "0px" }) => {
   return (
     <div className="relative flex flex-col items-center group">
-      <div className="relative py-6 px-4 md:px-4">
+      <div className="relative py-5 px-4 md:px-4">
         <span className="absolute left-0 right-0 top-0 h-1 bg-teal-400 scale-x-0 group-hover:scale-x-70 transition-transform duration-300 ease-out origin-center rounded-full"></span>
         <span className="absolute left-0 right-0 bottom-0 h-1 bg-teal-400 scale-x-0 group-hover:scale-x-70 transition-transform duration-300 ease-out origin-center rounded-full"></span>
         <div

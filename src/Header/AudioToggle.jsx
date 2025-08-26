@@ -11,13 +11,12 @@ const AudioToggle = () => {
       audioRef.current.pause();
     } else {
       audioRef.current.play();
-      audioRef.current.loop = true; // loop background music
+      audioRef.current.loop = true;
     }
     setIsPlaying(!isPlaying);
   };
 
   return (
-    <div className="order-2 md:order-none mt-14 md:mt-0 md:mb-3 md:ml-2">
     <button
       onClick={toggleAudio}
       className="p-4 rounded-full bg-[#212121] text-teal-500 outline-none border-4 border-transparent hover:border-teal-400 
@@ -26,7 +25,6 @@ const AudioToggle = () => {
     >
       {isPlaying ? <FaVolumeUp size={20} /> : <FaVolumeMute size={20} />}
     </button>
-    </div>
   );
 };
 
