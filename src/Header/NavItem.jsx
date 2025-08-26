@@ -5,7 +5,7 @@ export const NavItem = ({ icon: Icon, label, rightPos = "0px" }) => {
         <span className="absolute left-0 right-0 top-0 h-1 bg-teal-400 scale-x-0 group-hover:scale-x-70 transition-transform duration-300 ease-out origin-center rounded-full"></span>
         <span className="absolute left-0 right-0 bottom-0 h-1 bg-teal-400 scale-x-0 group-hover:scale-x-70 transition-transform duration-300 ease-out origin-center rounded-full"></span>
         <div
-          className="cursor-pointer p-3 md:p-3 rounded-full bg-[#212121] font-semibold text-teal-400 flex items-center gap-2 transition-all duration-300 ease-out
+          className="cursor-pointer p-2 rounded-full bg-[#212121] font-semibold text-teal-400 flex items-center gap-2 transition-all duration-300 ease-out
                      shadow-[inset_3px_3px_6px_#bebebe,inset_-3px_-3px_6px_#ffffff,0_4px_6px_rgba(0,0,0,0.15)]
                      border-4 border-transparent hover:border-teal-400
                      "
