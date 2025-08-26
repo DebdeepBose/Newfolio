@@ -2,8 +2,8 @@ export const NameMain = () => {
   return (
     <div
       className="relative group order-0 select-none md:order-none
-             text-teal-400 font-bold text-xl md:text-2xl tracking-wide
-             px-5 py-1 flex items-center justify-center
+             text-teal-400 font-semibold text-xl md:text-2xl tracking-wide
+             px-4 py-1 flex items-center justify-center
              transition-transform duration-300 hover:scale-105 mb-4"
     >
       <span
@@ -13,6 +13,7 @@ export const NameMain = () => {
                transition-transform duration-500 ease-in-out
                rounded-full"
       ></span>
+
 
       <span
         className="absolute right-0 top-0 h-full w-[2px] 

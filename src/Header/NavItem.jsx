@@ -10,7 +10,7 @@ export const NavItem = ({ icon: Icon, label, rightPos = "0px" }) => {
                      border-4 border-transparent hover:border-teal-400
                      "
         >
-          {Icon && <Icon className="text-xl lg:text-2xl" />}
+          {Icon && <Icon className="text-xl font-normal lg:text-2xl" />}
         </div>
       </div>
 
