@@ -28,9 +28,9 @@ export const MacView = ({ bgImg }) => {
     <StyledWrapper bgImg={bgImg}>
       <div className="laptop">
         <div
-          className={`screen ${inView ? "open" : ""} h-[318px] w-[530px]
+          className={`screen ${inView ? "open" : ""} h-[300px] w-[475px] md:w-[525px]
         mx-auto
-        p-[9px] pb-[23px]
+        p-[9px] pb-[23px] md:after:w-[518px] after:h-[20px]
         relative flex items-center justify-center bg-[#111] bg-cover bg-center rounded-[20px] transition-transform duration-[1200ms] ease-out`}
           ref={screenRef}
         >
@@ -41,8 +41,8 @@ export const MacView = ({ bgImg }) => {
                     border border-solid border-[#a0a3a7]
                     rounded-t-[2px] rounded-b-[12px]
                     border-t-[1px] border-r-[2px] border-b-0 border-l-[2px]
-                    shadow-[inset_0_-2px_8px_0_#6c7074]
-                    h-[14px] mt-[-10px] relative w-[630px] z-[9] rounded-[20px]"
+                    shadow-[inset_0_-2px_8px_0_#6c7074] 
+                    h-[14px] mt-[-10px] relative w-[580px] md:w-[630px] z-[9] rounded-[20px]"
         />
       </div>
     </StyledWrapper>
@@ -72,7 +72,7 @@ const StyledWrapper = styled.div`
 
   .screen::before {
     content: "";
-    width: 518px;
+    width: 418px;
     height: 12px;
     position: absolute;
     background: linear-gradient(#979899, transparent);
@@ -81,23 +81,15 @@ const StyledWrapper = styled.div`
     border-radius: 5px 5px;
   }
 
-  .text {
-    font-family: "Segoe UI", Roboto, sans-serif;
-    color: #fff;
-    text-align: center;
-    text-shadow: 0 0 5px #000;
-    padding: 1rem;
-  }
 
   .screen::after {
     background: linear-gradient(to bottom, #272727, #0d0d0d);
     border-radius: 0 0 20px 20px;
     bottom: 2px;
     content: "";
-    height: 20px;
     left: 2px;
     position: absolute;
-    width: 524px;
+    
   }
 
   .keyboard::after {
