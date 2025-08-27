@@ -104,7 +104,7 @@ const StyledWrapper = styled.div`
 
   .keyboard {
     @media (max-width: 768px) {
-      width: 140vw;
+      width: 135vw;
       height: 14px;
     }
   }
