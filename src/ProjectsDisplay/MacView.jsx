@@ -29,7 +29,7 @@ export const MacView = ({ bgImg }) => {
         <div
           className={`screen ${inView ? "open" : ""} h-[300px] w-full max-w-[520px] aspect-[518/318] 
           mx-auto
-          p-[9px] pb-[23px] md:after:w-[518px] after:h-[20px]
+          p-[9px] pb-[23px] md:after:w-[509px] after:h-[20px]
           relative flex items-center justify-center bg-[#111] bg-cover bg-center rounded-[20px] transition-transform duration-[1200ms] ease-out`}
           ref={screenRef}
         >
@@ -66,7 +66,7 @@ const StyledWrapper = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     @media (max-width: 768px) {
-      width: 95vw;
+      width: 115vw;
       padding: 5px;
       border-radius: 10px;
     }
@@ -104,7 +104,7 @@ const StyledWrapper = styled.div`
 
   .keyboard {
     @media (max-width: 768px) {
-      width: 120vw;
+      width: 135vw;
       height: 14px;
     }
   }
