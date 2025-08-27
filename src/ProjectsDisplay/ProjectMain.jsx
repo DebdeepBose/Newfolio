@@ -4,12 +4,12 @@ import leafSS from "../assets/leafSs.png";
 
 export const ProjectMain = () => {
   return (
-    <div className="bg-black min-h-screen w-full flex flex-col items-center py-16 px-24">
-      <h2 className="text-4xl md:text-5xl font-medium text-teal-300 mb-16">
+    <div className="bg-black min-h-screen w-full flex flex-col items-center px-24">
+      <h2 className="text-4xl md:text-5xl font-medium text-teal-300 mb-16 mt-16">
         My Projects
       </h2>
 
-      <div className="flex flex-col gap-12 w-full items-center">
+      <div className="flex flex-col gap-4 w-full items-center">
         <ProjectCard
           title="ShadeSeek"
           description="A simple responsive frontend website that helps to search, sort, and filter properties based on cost and date. 

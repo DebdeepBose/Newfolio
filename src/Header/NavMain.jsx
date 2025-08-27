@@ -19,7 +19,7 @@ export const NavMain = () => {
       <div
         className={`Nav rounded-2xl flex md:gap-10 px-2 md:px-12 justify-center border-x-3 border-x-teal-400 transition-all duration-300 ${
           scrolled
-            ? "bg-black/40 backdrop-blur-md shadow-lg" 
+            ? "bg-black/40 backdrop-blur-xs shadow-lg" 
             : "bg-[#212121]" 
         }`}
       >
