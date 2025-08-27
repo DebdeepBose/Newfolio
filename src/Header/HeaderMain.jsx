@@ -4,7 +4,7 @@ import { NameMain } from "./NameMain";
 
 export const HeaderMain = () => {
   return (
-    <div className="w-full p-4 md:py-6 md:pr-16 flex flex-col md:flex-row items-center justify-between">
+    <div className="w-full p-4 md:py-6 md:pr-12 md:pl-8 flex flex-col md:flex-row items-center justify-between">
 
       <div className="flex items-center justify-center gap-2">
         <NameMain />
