@@ -22,7 +22,7 @@ const ProjectCard = ({ title, description, viewLink, codeLink, passBg }) => {
           {description}
         </div>
 
-        <div className="buttons flex justify-center gap-6 flex-wrap">
+        <div className="buttons flex justify-center gap-3 md:gap-6 flex-wrap">
           <AButton
             href={codeLink}
             icon={<FaGithub color="#fff" />}

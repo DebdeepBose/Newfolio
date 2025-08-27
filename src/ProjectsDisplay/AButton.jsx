@@ -9,14 +9,14 @@ const AButton = ({ href, icon, frontText, topText }) => {
         </div>
         <div className="cube">
           <span
-            className="absolute h-[37px] w-[150px] flex justify-center items-center 
+            className="absolute h-[37px] w-[140px] md:w-[150px] flex justify-center items-center 
                  text-[0.8em] uppercase tracking-[0.5px] font-bold
-               front bg-black text-[#5eead4] pb-1 border-b-teal-400 border-b-2"
+               front bg-black text-[#5eead4] pb-1 border-b-teal-400 border-b-[2.5px] md:border-b-2"
           >
             {frontText}
           </span>
           <span
-            className="absolute h-[34px] w-[150px] flex justify-center items-center 
+            className="absolute h-[34px] w-[140px] md:w-[150px] flex justify-center items-center 
                  text-[0.8em] uppercase tracking-[0.5px] font-bold 
                 top bg-black text-[#5eead4]  pb-1 border-b-teal-400 border-b-[2.5px] "
           >
