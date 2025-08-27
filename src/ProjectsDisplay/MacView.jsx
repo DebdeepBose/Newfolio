@@ -66,7 +66,7 @@ const StyledWrapper = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     @media (max-width: 768px) {
-      width: 115vw;
+      width: 135vw;
       padding: 5px;
       border-radius: 10px;
     }
@@ -104,7 +104,7 @@ const StyledWrapper = styled.div`
 
   .keyboard {
     @media (max-width: 768px) {
-      width: 135vw;
+      width: 145vw;
       height: 14px;
     }
   }
