@@ -4,7 +4,7 @@ import { FaUser } from "react-icons/fa";
 
 export const AboutMain = () => {
   return (
-    <div id="about-section" className="mt-24  md:pl-36 h-full w-screen bg-black flex flex-col items-center justify-center pt-16 md:pr-8">
+    <div id="about-section" className="mt-16  md:pl-36 h-full w-screen bg-black flex flex-col items-center justify-center pt-16 md:pr-8">
       <h2 className="flex items-center justify-center text-4xl md:text-5xl font-semibold text-teal-300 mb-24 text-center md:mr-32 mr-2">
         <FaUser className="mr-2" /> About Me
       </h2>

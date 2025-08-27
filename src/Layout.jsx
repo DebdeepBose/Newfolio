@@ -23,11 +23,13 @@ export function Layout({ children }) {
   }, []);
 
   return (
-    <div id="smooth-wrapper">
-      <div id="smooth-content" className="bg-black text-white">
-        <HeaderMain />
-        {children}
+    <>
+      <HeaderMain />
+      <div id="smooth-wrapper">
+        <div id="smooth-content" className="bg-black text-white">
+          {children}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

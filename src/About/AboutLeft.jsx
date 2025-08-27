@@ -4,7 +4,7 @@ export const AboutLeft = () => {
   return (
     <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start pb-6 md:px-16 px-8 text-white space-y-6">
       <h1 className="text-3xl md:text-5xl font-medium mt-2">
-        Hey There! I am Debdeep
+        Hey There! 
       </h1>
       <p className="text-lg md:text-xl text-gray-300 text-center md:text-start">
         I'm an aspiring software developer from India. I enjoy solving problems

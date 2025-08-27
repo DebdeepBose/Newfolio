@@ -10,14 +10,17 @@ import { FooterMain } from "./Footer/FooterMain";
 function App() {
   return (
     <Layout>
-      <HeroMain />
-      <AboutMain />
-      <SkillMain />
-      <ProjectMain />
-      <ContactMain />
-      <FooterMain />
+      <div className="pt-32"> 
+        <HeroMain />
+        <AboutMain />
+        <SkillMain />
+        <ProjectMain />
+        <ContactMain />
+        <FooterMain />
+      </div>
     </Layout>
   );
 }
+
 
 export default App;
