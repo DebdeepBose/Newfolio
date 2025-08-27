@@ -18,7 +18,7 @@ const ProjectCard = ({ title, description, viewLink, codeLink, passBg }) => {
           {title}
         </div>
 
-        <div className="desc py-4 px-8 flex-grow max-w-lg text-center font-medium bg-gradient-to-r from-teal-300 via-teal-100 to-teal-50 bg-clip-text text-transparent">
+        <div className="desc py-4 px-12 flex-grow max-w-lg text-center font-medium bg-gradient-to-r from-teal-300 via-teal-100 to-teal-50 bg-clip-text text-transparent">
           {description}
         </div>
 
