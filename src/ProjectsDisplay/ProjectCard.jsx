@@ -4,20 +4,25 @@ import AButton from "./AButton";
 import { FaGithub } from "react-icons/fa";
 import { SiVercel } from "react-icons/si";
 
-const ProjectCard = ({ title, description, viewLink, codeLink }) => {
+
+
+const ProjectCard = ({ title, description, viewLink, codeLink, passBg }) => {
   return (
-    <CardWrapper>
-      <div className="left flex-1 min-w-[300px] border-2 border-teal-500 flex items-center justify-center">
-        <MacView />
+    <CardWrapper className="flex flex-col md:flex-row gap-[0.1rem] md:gap-[0.5rem]">
+      <div className="left flex-1 min-w-[300px] flex items-center justify-center">
+        <MacView bgImg={passBg} />
       </div>
-      <div className="right flex-1 items-center min-w-[300px] border-2 border-teal-500 p-4 flex flex-col gap-4">
-        <div className="title border-2 border-teal-500 px-4 py-2 font-medium text-xl text-center text-teal-400">
+
+      <div className="right flex-1 min-w-[300px] p-4 flex flex-col gap-4 items-center mb-6">
+        <div className="title px-4 py-2 font-medium text-4xl text-center text-teal-400">
           {title}
         </div>
-        <div className="desc border-2 border-teal-500 p-4 flex-grow max-w-lg text-center ">
+
+        <div className="desc py-4 px-8 flex-grow max-w-lg text-center font-medium bg-gradient-to-r from-teal-300 via-teal-100 to-teal-50 bg-clip-text text-transparent">
           {description}
         </div>
-        <div className="buttons flex justify-center gap-4">
+
+        <div className="buttons flex justify-center gap-6 flex-wrap">
           <AButton
             href={codeLink}
             icon={<FaGithub color="#fff" />}
@@ -26,7 +31,7 @@ const ProjectCard = ({ title, description, viewLink, codeLink }) => {
           />
           <AButton
             href={viewLink}
-            icon={<SiVercel color="fff" />}
+            icon={<SiVercel color="#fff" />}
             frontText="live demo"
             topText="on vercel"
           />
@@ -38,21 +43,12 @@ const ProjectCard = ({ title, description, viewLink, codeLink }) => {
 
 const CardWrapper = styled.div`
   display: flex;
-  gap: 2rem;
-  border: 2px solid teal;
   padding: 1.5rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
-
-  .buttons a {
-    border: 2px solid teal;
-    padding: 0.5rem 1.5rem;
-    text-decoration: none;
-    font-weight: medium;
-    color: black;
-    transition: background 0.2s;
-  }
-
+  justify-content: center;
 `;
+
+
 
 export default ProjectCard;

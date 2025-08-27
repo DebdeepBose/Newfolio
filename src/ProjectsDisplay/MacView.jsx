@@ -1,8 +1,8 @@
-import React, { useRef, useEffect, useState } from "react";
-import Ss from "../assets/Ss.png";
+import { useRef, useEffect, useState } from "react";
+
 import styled from "styled-components";
 
-export const MacView = () => {
+export const MacView = ({ bgImg }) => {
   const screenRef = useRef(null);
   const [inView, setInView] = useState(false);
 
@@ -25,12 +25,25 @@ export const MacView = () => {
   }, []);
 
   return (
-    <StyledWrapper>
+    <StyledWrapper bgImg={bgImg}>
       <div className="laptop">
-        <div className={`screen ${inView ? "open" : ""}`} ref={screenRef}>
+        <div
+          className={`screen ${inView ? "open" : ""} h-[318px] w-[530px]
+        mx-auto
+        p-[9px] pb-[23px]
+        relative flex items-center justify-center bg-[#111] bg-cover bg-center rounded-[20px] transition-transform duration-[1200ms] ease-out`}
+          ref={screenRef}
+        >
           <div className="header" />
         </div>
-        <div className="keyboard" />
+        <div
+          className="keyboard bg-[radial-gradient(circle_at_center,_#e2e3e4_85%,_#a9abac_100%)]
+                    border border-solid border-[#a0a3a7]
+                    rounded-t-[2px] rounded-b-[12px]
+                    border-t-[1px] border-r-[2px] border-b-0 border-l-[2px]
+                    shadow-[inset_0_-2px_8px_0_#6c7074]
+                    h-[14px] mt-[-10px] relative w-[630px] z-[9] rounded-[20px]"
+        />
       </div>
     </StyledWrapper>
   );
@@ -42,24 +55,15 @@ const StyledWrapper = styled.div`
   }
 
   .screen {
-    border-radius: 20px;
     box-shadow: inset 0 0 0 2px #c8cacb, inset 0 0 0 10px #000;
-    height: 318px;
-    width: 518px;
-    margin: 0 auto;
-    padding: 9px 9px 23px 9px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url(${Ss});
-    background-size: cover;
-    background-position: center;
+    background-image: ${({ bgImg }) => (bgImg ? `url(${bgImg})` : "none")};
     transform-style: preserve-3d;
     transform: perspective(1900px) rotateX(-88.5deg);
     transform-origin: 50% 100%;
-    transition: transform 1.2s ease-out;
-    background-color: #111; /* fallback */
+     background-size: 100% 100%;
+     background-size: calc(100% - 10px) calc(100%);    /* ✅ force stretch to exactly fit */
++   background-repeat: no-repeat;
++   background-position: center;
   }
 
   .screen.open {
@@ -90,23 +94,10 @@ const StyledWrapper = styled.div`
     border-radius: 0 0 20px 20px;
     bottom: 2px;
     content: "";
-    height: 24px;
+    height: 20px;
     left: 2px;
     position: absolute;
-    width: 514px;
-  }
-
-  .keyboard {
-    background: radial-gradient(circle at center, #e2e3e4 85%, #a9abac 100%);
-    border: solid #a0a3a7;
-    border-radius: 2px 2px 12px 12px;
-    border-width: 1px 2px 0 2px;
-    box-shadow: inset 0 -2px 8px 0 #6c7074;
-    height: 14px;
-    margin-top: -10px;
-    position: relative;
-    width: 620px;
-    z-index: 9;
+    width: 524px;
   }
 
   .keyboard::after {
@@ -135,5 +126,3 @@ const StyledWrapper = styled.div`
     width: 40px;
   }
 `;
-
-
