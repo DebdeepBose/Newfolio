@@ -1,3 +1,3 @@
 export const SkillMain = () => {
-  return <div></div>;
+  return <div className="bg-black h-screen w-screen"></div>;
 };
