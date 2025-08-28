@@ -1,6 +1,6 @@
-import { ProfileCard } from "../Hero/ProfileCard";
 import { AboutLeft } from "./AboutLeft";
 import { FaUser } from "react-icons/fa";
+import { AboutPFP } from "./AboutPFP";
 
 export const AboutMain = () => {
   return (
@@ -16,7 +16,7 @@ export const AboutMain = () => {
       <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-center w-full">
         <AboutLeft />
         <div className="w-full md:w-1/2 relative flex items-center justify-center mb-8 md:mb-0">
-          <ProfileCard />
+          <AboutPFP />
         </div>
       </div>
     </div>
