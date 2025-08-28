@@ -1,7 +1,6 @@
 export const AboutPFP = () => {
   return (
     <div className="relative w-[300px] h-[300px] md:w-[350px] md:h-[350px]">
-      {/* Gradient layer (stays in place, but colors move) */}
       <div
         className="absolute inset-0 rounded-[29%] spin-gradient"
         style={{
@@ -9,13 +8,15 @@ export const AboutPFP = () => {
         }}
       ></div>
 
-      {/* Static black container with image */}
-      <div className="absolute top-1/2 left-1/2 w-[295px] h-[295px] md:w-[345px] md:h-[345px] bg-[#071026] rounded-[30%] overflow-hidden transform -translate-x-1/2 -translate-y-1/2">
-        <img
-          src="/AboutImg.jpeg"
-          alt="Profile"
-          className="w-full h-full object-contain"
-        />
+      <div className="absolute top-1/2 left-1/2 w-[295px] h-[295px] md:w-[345px] md:h-[345px] bg-black rounded-[30%] overflow-hidden transform -translate-x-1/2 -translate-y-1/2">
+        <div className="relative w-full h-full">
+          <img
+            src="/tealhand.png"
+            alt="Profile"
+            className="w-full h-full object-contain scale-75 brightness-105"
+          />
+          <div className="absolute inset-0 bg-teal-300 opacity-90 brightness-150 mix-blend-multiply"></div>
+        </div>
       </div>
 
       <style>
