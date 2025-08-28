@@ -1,10 +1,20 @@
 import { AboutLeft } from "./AboutLeft";
 import { FaUser } from "react-icons/fa";
 import { AboutPFP } from "./AboutPFP";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const AboutMain = () => {
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, 
+        once: true,     
+      });
+    }, []);
   return (
-    <div className="mt-20 h-full w-screen bg-black flex flex-col items-center justify-center pt-18 md:pt-8 md:pl-32">
+
+    <div data-aos="fade-left" className=" select-none mt-20 h-full w-screen bg-black flex flex-col items-center justify-center pt-18 md:pt-8 md:pl-32">
       <div id="about"></div>
       <h2 className="text-4xl md:text-5xl font-semibold mb-24 mt-16 flex items-center gap-3 justify-center text-center md:mr-32">
         <FaUser className="text-teal-400" />

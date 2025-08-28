@@ -7,7 +7,7 @@ import todo from "../assets/todo.png";
 
 export const ProjectMain = () => {
   return (
-    <div id="projects" className="bg-black min-h-screen w-full flex flex-col items-center px-24">
+    <div id="projects" className="select-none bg-black min-h-screen w-full flex flex-col items-center px-24">
       <h2 className="text-4xl md:text-5xl font-medium mb-16 mt-16 flex items-center gap-3">
         <FaCode className="text-teal-400" />
         <span className="bg-gradient-to-r from-teal-400 via-teal-200 to-teal-100 bg-clip-text text-transparent">

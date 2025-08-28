@@ -7,7 +7,7 @@ export const FooterMain = () => {
   const scrollToSection = (id) => {
     gsap.to(window, {
       duration: 1,
-      scrollTo: { y: `#${id}`, offsetY: 80 }, // offsetY if you have sticky header
+      scrollTo: { y: `#${id}`, offsetY: 80 }, 
       ease: "power2.inOut",
     });
   };
@@ -26,12 +26,12 @@ export const FooterMain = () => {
         </div>
 
         <div className="flex flex-col items-center -mt-16 md:mt-0">
-          <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-teal-200">
+          <h3 className="text-xl font-semibold mb-4  select-none">Quick Links</h3>
+          <ul className="space-y-2 text-teal-200 ">
             <li>
               <button
                 onClick={() => scrollToSection("home")}
-                className="hover:text-teal-400 transition-colors"
+                className="hover:text-teal-400 transition-colors cursor-pointer"
               >
                 Home
               </button>
@@ -39,7 +39,7 @@ export const FooterMain = () => {
             <li>
               <button
                 onClick={() => scrollToSection("about")}
-                className="hover:text-teal-400 transition-colors"
+                className="hover:text-teal-400 transition-colors cursor-pointer"
               >
                 About
               </button>
@@ -47,7 +47,7 @@ export const FooterMain = () => {
             <li>
               <button
                 onClick={() => scrollToSection("skills")}
-                className="hover:text-teal-400 transition-colors"
+                className="hover:text-teal-400 transition-colors cursor-pointer"
               >
                 Skills
               </button>
@@ -55,7 +55,7 @@ export const FooterMain = () => {
             <li>
               <button
                 onClick={() => scrollToSection("projects")}
-                className="hover:text-teal-400 transition-colors"
+                className="hover:text-teal-400 transition-colors cursor-pointer"
               >
                 Projects
               </button>
@@ -63,7 +63,7 @@ export const FooterMain = () => {
             <li>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="hover:text-teal-400 transition-colors"
+                className="hover:text-teal-400 transition-colors cursor-pointer" 
               >
                 Contact
               </button>
@@ -72,15 +72,15 @@ export const FooterMain = () => {
         </div>
 
         <div className="flex flex-col items-center md:items-end">
-          <h3 className="text-xl font-semibold mb-4">Contact</h3>
+          <h3 className="text-xl font-semibold mb-4  select-none">Contact</h3>
           <p className="text-teal-200 text-sm">dbworkofficial@gmail.com</p>
           <p className="text-teal-200 text-sm">+91 7439299792</p>
         </div>
       </div>
 
-      <div className="border-t border-teal-800 mt-10 pt-6 text-center text-sm text-teal-500">
+      <div className="border-t border-teal-800 mt-10 pt-6 text-center text-sm text-teal-500  select-none">
         Made by {" "}
-        <span className="text-teal-300 font-semibold">Debdeep Bose</span>
+        <span className="text-teal-300 font-semibold " >Debdeep Bose</span>
       </div>
     </footer>
   );

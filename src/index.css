@@ -1,9 +1,10 @@
 @import "tailwindcss";
 body {
-  font-family: 'Fredoka', sans-serif;
+  font-family: "Fredoka", sans-serif;
 }
 
-html,body{
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -12,19 +13,19 @@ html,body{
 }
 
 
+
 ::-webkit-scrollbar {
-  width: 8px; 
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #111113; 
+  background: #111113;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #5eead4; 
+  background-color: #5eead4;
   border-radius: 9999px;
 }
-
 
 * {
   scrollbar-width: thin;

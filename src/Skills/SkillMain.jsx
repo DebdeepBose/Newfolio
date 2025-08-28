@@ -13,15 +13,24 @@ import {
 import { FaC } from "react-icons/fa6";
 import { SiTailwindcss, SiMysql, SiCplusplus } from "react-icons/si";
 import { SiFirebase, SiJquery, SiGreensock, SiSass } from "react-icons/si";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const SkillMain = () => {
+  useEffect(() => {
+      AOS.init({
+        duration: 1000, 
+        once: true,     
+      });
+    }, []);
   return (
-    <div id="skills" className="bg-black min-h-screen w-screen flex flex-col items-center py-16 select-none md:mt-24">
+    <div id="skills" data-aos="fade-right" className="bg-black min-h-screen w-screen flex flex-col items-center py-16 select-none md:mt-24">
       <h2 className="text-4xl md:text-5xl font-medium text-teal-300 mb-16 flex items-center gap-3">
         <FaTools className="text-teal-400" />
         My Skills
       </h2>
-      <div className="flex flex-wrap justify-center gap-10 md:grid md:grid-cols-4 md:gap-12">
+      <div className="flex flex-wrap justify-center gap-10 md:grid md:grid-cols-4 md:gap-12" data-aos="fade-up">
         <SkillCard icon={FaHtml5} title="HTML5" />
         <SkillCard icon={FaCss3Alt} title="CSS3" />
         <SkillCard icon={FaJs} title="JavaScript" />
