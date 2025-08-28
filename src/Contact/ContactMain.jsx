@@ -6,7 +6,7 @@ import { useRef, useState } from "react";
 
 export const ContactMain = () => {
   const form = useRef();
-  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
+  const [status, setStatus] = useState("idle");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -14,10 +14,10 @@ export const ContactMain = () => {
 
     emailjs
       .sendForm(
-        "service_e9e08iu",   // Service ID
-        "template_7kd6dvj",  // Template ID
+        "service_e9e08iu",  
+        "template_7kd6dvj",  
         form.current,
-        "jNgiJFDrNT3jGvvpr"  // Public Key
+        "jNgiJFDrNT3jGvvpr"  
       )
       .then(
         () => {
@@ -32,7 +32,7 @@ export const ContactMain = () => {
   };
 
   return (
-    <div className="w-screen min-h-screen bg-black flex flex-col items-center justify-center py-1 px-6">
+    <div id="contact" className="w-screen min-h-screen bg-black flex flex-col items-center justify-center py-1 px-6">
       <h2 className="flex items-center gap-3 text-4xl md:text-5xl mb-12">
         <FaEnvelope className="text-teal-400 shrink-0" />
         <span className="font-semibold bg-gradient-to-r from-teal-400 via-teal-200 to-teal-100 bg-clip-text text-transparent">
@@ -54,7 +54,6 @@ export const ContactMain = () => {
         <TealNebula label="Your Email" name="user_email" type="email" />
         <TealNebula label="Message" name="message" multiline height="120px" />
 
-        {/* 🔗 pass form status into the button */}
         <TealSendButton status={status} />
       </form>
 

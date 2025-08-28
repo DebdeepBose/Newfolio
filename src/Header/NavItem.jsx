@@ -1,14 +1,31 @@
-export const NavItem = ({ icon: Icon, label, rightPos = "0px" }) => {
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { useCallback } from "react";
+
+gsap.registerPlugin(ScrollToPlugin);
+
+export const NavItem = ({ icon: Icon, label, rightPos = "0px", targetId }) => {
+  const handleClick = useCallback(() => {
+    if (targetId) {
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: { y: `#${targetId}`, offsetY: 80 }, // adjust offset if navbar overlaps
+        ease: "power2.inOut",
+      });
+    }
+  }, [targetId]);
+
   return (
     <div className="relative flex flex-col items-center group">
       <div className="relative py-5 px-4 md:px-4">
         <span className="absolute left-0 right-0 top-0 h-1 bg-teal-400 scale-x-0 group-hover:scale-x-70 transition-transform duration-300 ease-out origin-center rounded-full"></span>
         <span className="absolute left-0 right-0 bottom-0 h-1 bg-teal-400 scale-x-0 group-hover:scale-x-70 transition-transform duration-300 ease-out origin-center rounded-full"></span>
+        
         <div
+          onClick={handleClick}
           className="cursor-pointer p-2 rounded-full bg-[#212121] font-semibold text-teal-400 flex items-center gap-2 transition-all duration-300 ease-out
                      shadow-[inset_3px_3px_6px_#bebebe,inset_-3px_-3px_6px_#ffffff,0_4px_6px_rgba(0,0,0,0.15)]
-                     border-4 border-transparent hover:border-teal-400
-                     "
+                     border-4 border-transparent hover:border-teal-400"
         >
           {Icon && <Icon className="text-xl font-normal lg:text-2xl" />}
         </div>

@@ -7,7 +7,7 @@ export const NavMain = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 30); 
+      setScrolled(window.scrollY > 30);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -18,16 +18,14 @@ export const NavMain = () => {
     <div className="flex items-center justify-center order-1 md:order-none md:mr-20">
       <div
         className={`Nav rounded-2xl flex md:gap-10 px-2 md:px-12 justify-center border-x-3 border-x-teal-400 transition-all duration-300 ${
-          scrolled
-            ? "bg-black/40 backdrop-blur-xs shadow-lg" 
-            : "bg-[#212121]" 
+          scrolled ? "bg-black/40 backdrop-blur-xs shadow-lg" : "bg-[#212121]"
         }`}
       >
-        <NavItem icon={FaHome} label="Home" rightPos="" />
-        <NavItem icon={FaUser} label="About" rightPos="" />
-        <NavItem icon={FaTools} label="Skills" rightPos="" />
-        <NavItem icon={FaCode} label="Projects" rightPos="" />
-        <NavItem icon={FaEnvelope} label="Contact" rightPos="" />
+        <NavItem icon={FaHome} label="Home" targetId="home" />
+        <NavItem icon={FaUser} label="About" targetId="about" />
+        <NavItem icon={FaTools} label="Skills" targetId="skills" />
+        <NavItem icon={FaCode} label="Projects" targetId="projects" />
+        <NavItem icon={FaEnvelope} label="Contact" targetId="contact" />
       </div>
     </div>
   );

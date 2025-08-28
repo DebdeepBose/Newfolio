@@ -16,7 +16,7 @@ import { SiFirebase, SiJquery, SiGreensock, SiSass } from "react-icons/si";
 
 export const SkillMain = () => {
   return (
-    <div className="bg-black min-h-screen w-screen flex flex-col items-center py-16 select-none md:mt-24">
+    <div id="skills" className="bg-black min-h-screen w-screen flex flex-col items-center py-16 select-none md:mt-24">
       <h2 className="text-4xl md:text-5xl font-medium text-teal-300 mb-16 flex items-center gap-3">
         <FaTools className="text-teal-400" />
         My Skills

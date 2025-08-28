@@ -8,7 +8,7 @@ export const KnowMoreButton = () => {
    const handleScroll = () => {
     gsap.to(window, {
       duration: 1, 
-      scrollTo: { y: "#about-section", offsetY: 70 }, 
+      scrollTo: { y: "#about", offsetY: 70 }, 
       ease: "power2.inOut",
     });
   };

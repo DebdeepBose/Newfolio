@@ -8,6 +8,7 @@ html,body{
   padding: 0;
   overflow-x: hidden;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 .bg-dot-pattern {
   background-image: radial-gradient(rgba(45, 212, 191, 0.4) 1px, transparent 1px);
