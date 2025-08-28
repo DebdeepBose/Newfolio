@@ -79,8 +79,8 @@ export const FooterMain = () => {
       </div>
 
       <div className="border-t border-teal-800 mt-10 pt-6 text-center text-sm text-teal-500">
-        Made with ❤️ by{" "}
-        <span className="text-teal-300 font-semibold">Your Name</span>
+        Made by {" "}
+        <span className="text-teal-300 font-semibold">Debdeep Bose</span>
       </div>
     </footer>
   );
