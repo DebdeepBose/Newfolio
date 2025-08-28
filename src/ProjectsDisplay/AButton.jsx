@@ -3,22 +3,27 @@ import styled from "styled-components";
 const AButton = ({ href, icon, frontText, topText }) => {
   return (
     <StyledWrapper>
-      <a href={href} target="_blank" rel="noreferrer" className="button-icon flex justify-center">
-        <div className="icon rounded-l-lg border-l-teal-400 border-l-3 border-b-teal-400 border-b-2  bg-black pl-4 py-[5px] flex items-center justify-center">
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        className="button-icon flex justify-center"
+      >
+        <div className="icon rounded-l-xl border-l-teal-400 border-l-3  bg-black pl-4 py-[5px] flex items-center justify-center">
           {icon}
         </div>
         <div className="cube">
           <span
-            className="absolute h-[37px] w-[140px] md:w-[150px] flex justify-center items-center 
-                 text-[0.8em] uppercase tracking-[0.5px] font-bold
-               front bg-black text-[#5eead4] pb-1 border-b-teal-400 border-b-[2.5px] md:border-b-2"
+            className="absolute h-[36px] md:h-[37px] w-[140px] md:w-[150px] flex justify-center items-center 
+              text-[0.8em] uppercase font-semibold
+              front bg-black text-[#5eead4] border-r-teal-300 border-r-2 rounded-r-xl"
           >
             {frontText}
           </span>
           <span
-            className="absolute h-[34px] w-[140px] md:w-[150px] flex justify-center items-center 
-                 text-[0.8em] uppercase tracking-[0.5px] font-bold 
-                top bg-black text-[#5eead4]  pb-1 border-b-teal-400 border-b-[2.5px] "
+            className="absolute h-[36px] md:h-[37px] w-[140px] md:w-[150px] flex justify-center items-center 
+              text-[0.8em] uppercase font-semibold
+              top bg-black text-[#5eead4] border-r-teal-300 border-r-3 rounded-r-xl"
           >
             {topText}
           </span>
@@ -53,7 +58,6 @@ const StyledWrapper = styled.div`
     transform: rotateX(90deg);
   }
 
-  
   .top {
     transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
   }

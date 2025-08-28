@@ -6,7 +6,16 @@ import { SiVercel } from "react-icons/si";
 
 
 
-const ProjectCard = ({ title, description, viewLink, codeLink, passBg }) => {
+const ProjectCard = ({ 
+  title, 
+  description, 
+  viewLink, 
+  codeLink, 
+  passBg, 
+  codeIcon, 
+  viewIcon,
+  place 
+}) => {
   return (
     <CardWrapper className="flex flex-col md:flex-row gap-[0.1rem] md:gap-[0.5rem]">
       <div className="left flex-1 min-w-[300px] flex items-center justify-center">
@@ -14,7 +23,7 @@ const ProjectCard = ({ title, description, viewLink, codeLink, passBg }) => {
       </div>
 
       <div className="right flex-1 min-w-[300px] p-4 flex flex-col gap-4 items-center mb-6">
-        <div className="title px-4 py-2 font-medium text-2xl md:text-4xl text-center text-teal-400">
+        <div className="title px-4 py-2 font-medium text-2xl md:text-4xl text-center bg-gradient-to-r from-teal-400 via-teal-200 to-teal-100 bg-clip-text text-transparent">
           {title}
         </div>
 
@@ -25,21 +34,23 @@ const ProjectCard = ({ title, description, viewLink, codeLink, passBg }) => {
         <div className="buttons flex justify-center gap-3 md:gap-6 flex-wrap">
           <AButton
             href={codeLink}
-            icon={<FaGithub color="#fff" />}
+            icon={codeIcon}   
             frontText="get source code"
             topText="on github"
           />
           <AButton
             href={viewLink}
-            icon={<SiVercel color="#fff" />}
+            icon={viewIcon}   
+            borderThickness=""
             frontText="live demo"
-            topText="on vercel"
+            topText={place}
           />
         </div>
       </div>
     </CardWrapper>
   );
 };
+
 
 const CardWrapper = styled.div`
   display: flex;
