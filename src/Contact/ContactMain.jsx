@@ -15,7 +15,7 @@ export const ContactMain = () => {
     emailjs
       .sendForm(
         "service_e9e08iu",  
-        "template_7kd6dvj",  
+        "template_kvi43c4",  
         form.current,
         "jNgiJFDrNT3jGvvpr"  
       )
