@@ -1,10 +1,23 @@
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
+
 export const NameMain = () => {
+  const handleScroll = () => {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: 0 },
+      ease: "power2.inOut",
+    });
+  };
   return (
     <div
       className="relative group order-0 select-none md:order-none
              text-teal-400 font-semibold text-xl md:text-2xl tracking-wide
              px-4 py-1 flex items-center justify-center
              transition-transform duration-300 hover:scale-105 mb-4"
+      onClick={handleScroll}
     >
       <span
         className="absolute left-0 top-0 h-full w-[2px] 
@@ -13,7 +26,6 @@ export const NameMain = () => {
                transition-transform duration-500 ease-in-out
                rounded-full"
       ></span>
-
 
       <span
         className="absolute right-0 top-0 h-full w-[2px] 

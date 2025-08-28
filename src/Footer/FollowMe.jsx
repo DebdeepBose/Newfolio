@@ -85,8 +85,8 @@ const StyledWrapper = styled.div`
       #0077b5,
       #0e76a8
     ); 
-    --item-2-gradient: linear-gradient(45deg, #333, #000); /* GitHub black */
-    --item-3-gradient: linear-gradient(
+    --item-2-gradient: linear-gradient(45deg, #333, #000); 
+     --item-3-gradient: linear-gradient(
       45deg,
       #f89f1b,
       #000

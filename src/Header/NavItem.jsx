@@ -9,7 +9,7 @@ export const NavItem = ({ icon: Icon, label, rightPos = "0px", targetId }) => {
     if (targetId) {
       gsap.to(window, {
         duration: 1,
-        scrollTo: { y: `#${targetId}`, offsetY: 80 }, // adjust offset if navbar overlaps
+        scrollTo: { y: `#${targetId}`, offsetY: 80 }, 
         ease: "power2.inOut",
       });
     }
