@@ -23,7 +23,7 @@ export const FollowMe = () => {
 
         <li style={{ "--i": 1 }} className="circle-box">
           <a
-            href="https://github.com/"
+            href="https://github.com/DebdeepBose"
             target="_blank"
             rel="noreferrer"
             className="anchor"
@@ -33,7 +33,7 @@ export const FollowMe = () => {
         </li>
         <li style={{ "--i": 2 }} className="circle-box">
           <a
-            href="https://leetcode.com/"
+            href="https://leetcode.com/u/DebdeepB03/"
             target="_blank"
             rel="noreferrer"
             className="anchor"

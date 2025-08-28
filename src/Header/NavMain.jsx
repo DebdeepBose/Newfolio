@@ -18,7 +18,7 @@ export const NavMain = () => {
     <div className="flex items-center justify-center order-1 md:order-none md:mr-20">
       <div
         className={`Nav rounded-2xl flex md:gap-10 px-2 md:px-12 justify-center border-x-3 border-x-teal-400 transition-all duration-300 ${
-          scrolled ? "bg-black/40 backdrop-blur-xs shadow-lg" : "bg-[#212121]"
+          scrolled ? "bg-black/40 backdrop-blur-xs shadow-lg" : "bg-transparent"
         }`}
       >
         <NavItem icon={FaHome} label="Home" targetId="home" />
