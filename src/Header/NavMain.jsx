@@ -21,9 +21,9 @@ export const NavMain = () => {
           scrolled ? "bg-black/40 backdrop-blur-xs shadow-lg" : "bg-transparent"
         }`}
       >
-        <NavItem icon={FaHome} label="Home" targetId="home" />
-        <NavItem icon={FaUser} label="About" targetId="about" />
-        <NavItem icon={FaTools} label="Skills" targetId="skills" />
+        <NavItem icon={FaHome} label="Home" targetId="home" rightPos="14px" />
+        <NavItem icon={FaUser} label="About" targetId="about" rightPos="12px"/>
+        <NavItem icon={FaTools} label="Skills" targetId="skills" rightPos="14px" />
         <NavItem icon={FaCode} label="Projects" targetId="projects" />
         <NavItem icon={FaEnvelope} label="Contact" targetId="contact" />
       </div>

@@ -4,7 +4,7 @@ import { useCallback } from "react";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-export const NavItem = ({ icon: Icon, label, rightPos = "0px", targetId }) => {
+export const NavItem = ({ icon: Icon, label, rightPos = "4px", targetId }) => {
   const handleClick = useCallback(() => {
     if (targetId) {
       gsap.to(window, {
@@ -23,7 +23,7 @@ export const NavItem = ({ icon: Icon, label, rightPos = "0px", targetId }) => {
         
         <div
           onClick={handleClick}
-          className="cursor-pointer p-2 rounded-full bg-[#212121] font-semibold text-teal-400 flex items-center gap-2 transition-all duration-300 ease-out
+          className="cursor-pointer p-3 rounded-full bg-[#212121] font-semibold text-teal-400 flex items-center gap-2 transition-all duration-300 ease-out
                      shadow-[inset_3px_3px_6px_#bebebe,inset_-3px_-3px_6px_#ffffff,0_4px_6px_rgba(0,0,0,0.15)]
                      border-4 border-transparent hover:border-teal-400"
         >
